@@ -1,0 +1,2872 @@
+// INCLUDED PAGES FOR USER CONTROL PANEL
+// DASHBOARD
+// ADD COMPONENT PAGE(EDIT)
+// GALLERY
+// ADD STAFF
+// ALL STAFF
+// CONTACTS
+// INTREGRATIONS
+// PERSONALIZATION 
+// BILLING 
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// color codE for design USER CONTROL PANEL NOT USER PROFILE
+$theme-color-main: #F2F6F9;
+$theme-color-child: #fff;
+$brand_color: linear-gradient(to right top, rgba(121, 0, 255, 0.9), rgba(121, 0, 255, 0.6));
+$menu_bg: #1E293B;
+$text-color: #000;
+$text-hover-color: rgba(121, 0, 255, 0.9);
+$button-bg-color: rgba(121, 0, 255, 0.9);
+$button-text-color: #fff;
+$button-hover-text-color: #fff;
+
+// Font family
+$heading-font: 'inter';
+$paragraph-font: 'inter';
+
+
+// ===== Edit page
+// =========
+// Main style for dashboard
+// =========
+
+// GLOBAL STYLE
+input {
+    z-index: 0 !important;
+}
+
+button {
+    z-index: 0;
+}
+
+h2.page_title {
+    font-family: $paragraph-font;
+    font-weight: 500;
+    font-size: 40px;
+    color: $text-color;
+
+}
+
+.modal-content {
+    background: $theme-color-main;
+
+
+}
+
+// GLOBAL STYLE end
+
+// ================================
+// ==============USER CONTROL PANEL
+// ================================
+
+// CONTENT WRAPPER 
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: 100vh;
+
+    // Left side menu bar
+    .left-menu {
+        z-index: 111;
+        flex-basis: 220px;
+        max-width: 220px;
+        flex-shrink: 0;
+        background: $menu_bg;
+        transition: all 0.1s ease-in-out;
+
+        // side bar menu top    
+        .top {
+            padding: 25px;
+            padding-left: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            // brand logo
+            img {
+                height: 30px;
+            }
+
+            // menu toggoelr
+            .menu-toggoler {
+                width: 35px;
+                border: none;
+                background: none;
+                text-align: right;
+                align-self: flex-end;
+                margin-bottom: 30px;
+
+                img {
+                    height: 35px;
+                }
+            }
+
+        }
+
+        // Main menu 
+
+        nav {
+            width: 100%;
+            position: relative;
+            margin-top: 20px;
+
+            ul {
+                list-style: none;
+
+                li {
+                    padding: 6px 15px;
+                    margin-bottom: 3px;
+
+                    a {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        align-items: center;
+                        text-decoration: none;
+                        color: $button-text-color;
+                        font-family: $paragraph-font;
+                        font-size: 16px;
+                        font-weight: 500;
+
+                        img {
+                            width: 18px;
+                            margin-right: 10px;
+                        }
+
+                    }
+                }
+
+                li.active,
+                li:hover {
+                    background: $button-bg-color;
+                    transition: all 0.2s ease-in-out;
+
+                }
+
+                li.active a {
+                    color: $button-text-color;
+                }
+            }
+        }
+    }
+
+    // LEFT SIDE MENU
+    .left-menu.active {
+        flex-basis: 80px;
+        max-width: 80px;
+        transition: all 0.2s ease-in-out;
+
+        // side bar menu top    
+        .top {
+
+            // brand logo
+            img.brand-logo {
+                display: none;
+            }
+
+        }
+
+        // Main menu 
+
+        nav {
+            // padding: 20px;
+
+            ul {
+                padding: 0px;
+                text-align: center;
+
+                li {
+                    width: 100%;
+                    height: 50px;
+                    margin: 0 auto;
+                    text-align: center;
+                    padding: 10px 0px;
+                    line-height: 50px;
+
+                    a {
+                        text-align: center;
+                        line-height: 30px;
+
+                        img {
+                            // padding: 5px;
+                            text-align: center;
+                            width: 25px;
+                            line-height: 50px;
+                            margin: 0 auto;
+                            // margin-right: 10px;
+                        }
+
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+
+                li:hover {
+                    transition: all 0.2s ease-in-out;
+
+                }
+            }
+        }
+    }
+
+    // TOP HEADER
+    header {
+        margin: 0;
+        width: 100%;
+        padding: 10px 30px;
+        margin: 0;
+        display: inline-flex;
+        text-align: right;
+        align-items: center;
+        justify-content: flex-end;
+        background: $menu_bg;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+
+        a {
+            text-decoration: none;
+
+            i {
+                font-size: 30px;
+                color: $button-text-color;
+                margin-right: 15px;
+            }
+        }
+
+        // notification bell
+        button {
+            background: none;
+            border: none;
+            height: 25px;
+            padding: 0;
+            margin: 0;
+            align-self: center;
+            margin-right: 20px;
+
+            img {
+                height: 25px;
+                line-height: 25px;
+
+            }
+        }
+
+        // user profile
+        img {
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .notification_panel {
+            position: absolute;
+            right: 100px;
+            top: 50px;
+            width: 300px;
+            height: auto;
+            padding: 30px 20px;
+            background: $theme-color-child;
+            border-radius: 5px;
+            display: none;
+            z-index: 11111111;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+
+            ul {
+                z-index: 11111111;
+                list-style: none;
+                position: relative;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    padding: 10px;
+                    border-radius: 5px;
+                    text-align: left;
+                    margin-bottom: 5px;
+                    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.08);
+
+                    p.time {
+                        font-size: 9px;
+                    }
+
+                    h3 {
+                        font-size: 13px;
+                        font-family: $paragraph-font;
+                        color: $text-hover-color;
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        font-size: 10px;
+                        font-family: $paragraph-font;
+                        color: #000;
+                        margin-bottom: 5px;
+                    }
+
+                    a {
+                        font-size: 12px;
+                        font-family: $paragraph-font;
+                        color: $button-bg-color;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+    // Main container
+    .main-container {
+        width: 100%;
+        flex-grow: 1;
+        background: $theme-color-main;
+        padding: 40px;
+        transition: all 0.2s ease-in-out;
+
+        // Container start here
+        .container {
+            padding-top: 60px;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+
+            button.btn1 {
+                position: relative;
+                margin-top: 20px;
+                text-align: center;
+                display: block;
+                width: 100%;
+                height: 50px;
+                // line-height: 40px;
+                color: $button-text-color;
+                font-size: 18px;
+                font-family: $paragraph-font;
+                font-weight: 600;
+                background: $brand_color;
+            }
+
+            //=====left side
+            .left-side {
+                width: 100%;
+                flex-grow: 1;
+                padding: 40px;
+                background: $theme-color-child;
+                border-radius: 15px;
+                overflow: hidden;
+
+                .sortable-chosen {
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+                    border: 2px solid $brand_color;
+                }
+
+                // add element button
+                button.add-element {
+                    width: 100% !important;
+                    height: 45px;
+                    border-radius: 30px;
+                    display: block;
+                    text-align: center;
+                    background: $button-bg-color !important;
+                    color: $button-text-color;
+
+
+                }
+
+                // COMPONENT SWITCH BOX
+                .switcher_box {
+                    padding-top: 30px;
+                    display: flex;
+                    align-items: center;
+
+                    p {
+                        font-size: 11px;
+                        color: rgba(0, 0, 0, 0.8);
+                        margin-left: 15px;
+                        padding-top: 20px;
+                    }
+
+                    .switch {
+                        position: relative;
+                        display: inline-block;
+                        width: 60px;
+                        height: 34px;
+
+                        .switch input {
+                            opacity: 0;
+                            width: 0;
+                            height: 0;
+                            display: none !important;
+                        }
+
+                        .switch input[type='checkbox'] {
+                            visibility: hidden;
+                            display: none !important;
+                        }
+
+                        .slider {
+                            position: absolute;
+                            cursor: pointer;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: #ccc;
+                            -webkit-transition: .4s;
+                            transition: .4s;
+                        }
+
+                        .slider:before {
+                            position: absolute;
+                            content: "";
+                            height: 26px;
+                            width: 26px;
+                            left: 4px;
+                            bottom: 4px;
+                            background-color: $button-text-color;
+                            -webkit-transition: .4s;
+                            transition: .4s;
+                        }
+
+                        input:checked+.slider {
+                            background-color: $brand_color;
+                        }
+
+                        input:focus+.slider {
+                            box-shadow: 0 0 1px $brand_color;
+                        }
+
+                        input:checked+.slider:before {
+                            -webkit-transform: translateX(26px);
+                            -ms-transform: translateX(26px);
+                            transform: translateX(26px);
+                        }
+
+                        /* Rounded sliders */
+                        .slider.round {
+                            border-radius: 34px;
+                        }
+
+                        .slider.round:before {
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                #addelement.modal {
+                    width: 100%;
+                    margin: 0px !important;
+                    padding: 0px !important;
+
+                    .modal-dialog {
+                        min-height: 100vh;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        .modal-content {
+                            max-width: 600px !important;
+                            width: 100%;
+
+
+                            // component box
+                            .component-box {
+                                list-style-type: none;
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                align-items: center;
+                                justify-content: center;
+
+                                li {
+                                    padding: 20px;
+                                    width: 100px;
+                                    height: 100px;
+                                    flex-basis: content;
+                                    flex-grow: 1;
+                                    border-radius: 10px;
+                                    margin: 5px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background: $brand_color;
+                                    border: 3px solid $brand_color;
+                                    transition: all 0.2s ease-in-out;
+                                    cursor: pointer;
+
+                                    img {
+                                        height: 25px;
+                                        margin: 0;
+                                        padding: 0;
+                                        display: block;
+
+                                    }
+
+                                    label {
+                                        margin-top: 10px;
+                                        display: block;
+                                        color: $button-text-color;
+                                        font-size: 18px;
+                                        text-align: center;
+                                        font-weight: 500;
+                                    }
+
+                                }
+
+                                li::selection,
+                                li:hover {
+                                    border: 3px solid rgba($menu_bg, 0.4);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Embaded component
+                .embaded-component {
+                    // max-width: 500px;
+                    width: 100%;
+                    padding-top: 10px;
+                    margin: 0 auto;
+                    overflow: hidden !important;
+                    // z-index: 111111;
+                    position: relative;
+
+                    .accordion-item {
+                        z-index: 0;
+                        margin: 10px;
+                        // overflow: hidden;
+                        cursor: move;
+                    }
+
+                    .accordion-header {
+                        background-color: $theme-color-main;
+                        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+                        width: 100%;
+                        height: 50px;
+                        padding: 5px 15px;
+                        border-radius: 5px;
+                        font-weight: bold;
+
+                        display: flex;
+                        align-items: center;
+
+
+                        i {
+                            // height: 20px;
+                            margin-right: 50px;
+                            font-size: 20px;
+                            color: $text-color;
+
+                        }
+
+                        #move-arrow {
+                            cursor: move;
+                        }
+
+                        h2 {
+                            cursor: pointer;
+                            width: 100%;
+                            flex-grow: 1;
+                            font-size: 20px;
+                            font-weight: 600;
+                            color: $text-color;
+                            margin-top: 5px;
+                        }
+
+                        .arrow {
+                            cursor: pointer;
+                            width: 20px;
+                            // align-self: flex-end;
+                            text-align: center;
+
+                            .ri-arrow-drop-down-line {
+
+                                font-size: 30px;
+                                color: $text-color;
+                                transition: all 0.15s ease-in-out;
+                            }
+
+                            .ri-arrow-drop-up-line {
+                                font-size: 30px;
+                                color: $text-color;
+                                transition: all 0.15s ease-in-out;
+                                display: none;
+                            }
+                        }
+
+                        // action button for delete component
+                        .action-menu {
+                            position: relative;
+                            width: 20px;
+                            // height: 20px;
+                            // background: $button-bg-color;
+                            // align-self: flex-end;
+                            text-align: center;
+                            margin-left: 40px;
+                            cursor: pointer;
+
+                            i {
+                                color: $text-color;
+
+                            }
+
+                        }
+                    }
+
+                    .accordion-content {
+                        padding: 20px 15px;
+                        background: $theme-color-main;
+                        // display: none;
+
+
+                    }
+
+                    .accordion-item:first-child .accordion-header {
+                        border-radius: 5px 5px 0 0;
+                    }
+
+                    .accordion-item:last-child .accordion-content {
+                        border-radius: 0 0 5px 5px;
+                    }
+
+                    .accordion-item.active .accordion-header {
+                        border-radius: 5px 5px 0px 0px;
+                    }
+
+                    .accordion-item.active .close-arow {
+
+                        display: block;
+                    }
+
+                    .accordion-item.active .down-arow {
+                        display: none;
+
+                    }
+
+                    .accordion-item.active .accordion-content {
+                        display: block;
+                    }
+
+
+
+
+                    // ====== component items
+                    // =========
+                    // ====== vcard
+                    #vcard-details {
+                        form {
+                            display: inline-flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            input {
+                                margin: 5px;
+                                width: 48%;
+                                height: 40px;
+                                border-radius: 5px;
+                                padding: 10px 20px;
+                                color: $text-color;
+                                border: none;
+                                background: $theme-color-child;
+                                flex-grow: 1;
+                                flex-shrink: 1;
+                                font-size: 14px;
+                                font-family: $paragraph-font;
+
+                            }
+
+                            input::selection,
+                            input:focus {
+                                border: none;
+                            }
+
+                            textarea::placeholder,
+                            input::placeholder {
+                                color: $text-color;
+                            }
+
+                            textarea {
+                                margin: 5px;
+                                width: 100%;
+                                border-radius: 5px;
+                                padding: 10px 20px;
+                                color: $text-color;
+                                border: none;
+                                background: $theme-color-child;
+                                flex-grow: 1;
+                                flex-shrink: 1;
+                                font-size: 14px;
+                                font-family: $paragraph-font;
+
+                            }
+
+                            .upload-image {
+                                width: 100%;
+                                height: 70px;
+                                // margin-bottom: 30px;
+                                margin: 5px;
+                                border-radius: 5px;
+                                text-align: center;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: $theme-color-child;
+
+                                input {
+                                    width: 100%;
+                                    height: 100%;
+                                    display: block;
+                                    display: none;
+                                }
+
+                                label {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    cursor: pointer;
+                                    width: 100%;
+                                    height: 100%;
+
+                                    i {
+                                        font-size: 40px;
+                                        color: $brand_color;
+                                    }
+
+                                }
+                            }
+
+                            // COMPONENT SWITCH BOX
+                            .switcher_box {
+                                display: flex;
+                                align-items: center;
+                                margin-top: -30px;
+
+                                p {
+                                    font-size: 11px;
+                                    color: rgba(0, 0, 0, 0.8);
+                                    margin-left: 15px;
+                                    padding-top: 20px;
+                                }
+
+                                .eneble_gallery {
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 60px;
+                                    height: 34px;
+
+                                    input {
+                                        opacity: 0;
+                                        width: 0;
+                                        height: 0;
+                                        display: none !important;
+                                    }
+
+                                    input[type='checkbox'] {
+                                        visibility: hidden;
+                                        display: none !important;
+                                    }
+
+                                    .slider {
+                                        position: absolute;
+                                        cursor: pointer;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        background-color: #ccc;
+                                        -webkit-transition: .4s;
+                                        transition: .4s;
+                                    }
+
+                                    .slider:before {
+                                        position: absolute;
+                                        content: "";
+                                        height: 26px;
+                                        width: 26px;
+                                        left: 4px;
+                                        bottom: 4px;
+                                        background-color: $button-text-color;
+                                        -webkit-transition: .4s;
+                                        transition: .4s;
+                                    }
+
+                                    input:checked+.slider {
+                                        background-color: $brand_color;
+                                    }
+
+                                    input:focus+.slider {
+                                        box-shadow: 0 0 1px $brand_color;
+                                    }
+
+                                    input:checked+.slider:before {
+                                        -webkit-transform: translateX(26px);
+                                        -ms-transform: translateX(26px);
+                                        transform: translateX(26px);
+                                    }
+
+                                    /* Rounded sliders */
+                                    .slider.round {
+                                        border-radius: 34px;
+                                    }
+
+                                    .slider.round:before {
+                                        border-radius: 50%;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                    // ====== vcard end
+                    // =========
+                    // ====== Social Accounts
+                    #social-accounts {
+
+                        form {
+                            width: 100%;
+                            padding: 5px;
+
+                            // Input group  
+                            .input-group {
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: nowrap;
+                                margin: 7px 0px;
+
+                                // social icon 
+                                .icon {
+                                    cursor: pointer;
+                                    width: 40px;
+                                    height: 40px;
+                                    flex-shrink: 0;
+                                    border-radius: 5px 0px 0px 5px;
+                                    flex-basis: 40px;
+                                    background: $brand_color;
+                                    border: 1px solid $button-bg-color;
+                                    line-height: 30px;
+                                    text-align: center;
+                                    z-index: 1;
+
+                                    img {
+                                        height: 25px;
+                                        margin: 0 auto;
+                                        text-align: center;
+                                    }
+                                }
+
+                                // input filed for social account
+                                input {
+                                    border: none;
+                                    padding: 10px 30px;
+                                    width: 100%;
+                                    height: 40px;
+                                    flex-grow: 1;
+                                    margin-left: -2px;
+                                    background: $theme-color-child;
+                                    border: 1px solid $theme-color-child;
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                    font-family: $paragraph-font;
+                                    color: $text-color;
+                                    z-index: 1;
+                                    border-radius: 0px 5px 5px 0px;
+                                }
+
+                                input::selection,
+                                input:focus {
+                                    border: 1px solid $theme-color-child !important;
+                                }
+
+                                input::placeholder {
+                                    color: $text-color;
+                                    // opacity: 0.6;
+                                }
+
+                                // Delete button
+                                .delete-btn {
+                                    width: 40px;
+                                    height: 40px;
+                                    background: $brand_color;
+                                    border: 1px solid $brand_color;
+                                    border-radius: 5px;
+                                    flex-shrink: 0;
+                                    flex-basis: 40px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    text-align: center;
+                                    padding: 0;
+                                    margin: 0;
+                                    margin-left: 15px;
+                                    z-index: 0 !important;
+
+                                    img {
+                                        width: 20px;
+                                        margin: 0 auto;
+                                        z-index: 0;
+                                    }
+                                }
+
+
+                            }
+
+                            // Submit button
+
+                            button {
+                                width: 170px;
+                                height: 45px;
+                                margin-top: 15px;
+                                background: $button-bg-color;
+                                color: $button-text-color;
+                                display: inline-flex;
+                                // margin: 7px;
+                                margin-top: 15px;
+                                font-size: 18px;
+                                line-height: 30px;
+                                text-align: center;
+                                justify-content: center;
+                                font-family: $paragraph-font;
+                            }
+
+                            button.add-more {
+                                margin-left: 0px;
+                                margin-right: 15px;
+                            }
+
+
+                        }
+
+                        // social icon modual
+
+                        #social-icons.modal {
+                            width: 100%;
+                            margin: 0px !important;
+                            padding: 0px !important;
+
+                            .modal-dialog {
+                                min-height: 100vh;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+
+                                .modal-content {
+                                    max-width: 600px !important;
+                                    width: 100%;
+
+
+                                    // component box
+                                    .icon-box {
+                                        list-style-type: none;
+                                        display: flex;
+                                        flex-direction: row;
+                                        flex-wrap: wrap;
+                                        align-items: center;
+                                        justify-content: center;
+                                        margin: 0;
+                                        padding: 0;
+
+                                        li {
+                                            cursor: pointer;
+                                            width: 35px;
+                                            height: 35px;
+                                            flex-basis: 35px;
+                                            flex-grow: 1;
+                                            border-radius: 3px;
+                                            margin: 5px;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            align-items: center;
+                                            background: $brand_color;
+                                            border: 1px solid $brand_color;
+                                            transition: all 0.15s ease-in-out;
+
+                                            i {
+                                                font-size: 20px;
+                                                color: $button-text-color;
+
+                                            }
+
+                                        }
+
+                                        li::selection,
+                                        li:hover {
+                                            background: $button-bg-color;
+                                            border: 1px solid $button-bg-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    #gallery-component {
+
+                        // COMPONENT SWITCH BOX
+                        .switcher_box {
+                            display: flex;
+                            align-items: center;
+                            margin-top: -30px;
+
+                            p {
+                                font-size: 11px;
+                                color: rgba(0, 0, 0, 0.8);
+                                margin-left: 15px;
+                                padding-top: 20px;
+                            }
+
+                            .eneble_gallery {
+                                position: relative;
+                                display: inline-block;
+                                width: 60px;
+                                height: 34px;
+
+                                input {
+                                    opacity: 0;
+                                    width: 0;
+                                    height: 0;
+                                    display: none !important;
+                                }
+
+                                input[type='checkbox'] {
+                                    visibility: hidden;
+                                    display: none !important;
+                                }
+
+                                .slider {
+                                    position: absolute;
+                                    cursor: pointer;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    background-color: #ccc;
+                                    -webkit-transition: .4s;
+                                    transition: .4s;
+                                }
+
+                                .slider:before {
+                                    position: absolute;
+                                    content: "";
+                                    height: 26px;
+                                    width: 26px;
+                                    left: 4px;
+                                    bottom: 4px;
+                                    background-color: $button-text-color;
+                                    -webkit-transition: .4s;
+                                    transition: .4s;
+                                }
+
+                                input:checked+.slider {
+                                    background-color: $brand_color;
+                                }
+
+                                input:focus+.slider {
+                                    box-shadow: 0 0 1px $brand_color;
+                                }
+
+                                input:checked+.slider:before {
+                                    -webkit-transform: translateX(26px);
+                                    -ms-transform: translateX(26px);
+                                    transform: translateX(26px);
+                                }
+
+                                /* Rounded sliders */
+                                .slider.round {
+                                    border-radius: 34px;
+                                }
+
+                                .slider.round:before {
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+
+
+
+                    // ====== Social Accounts end
+                    // =========
+                    // ====== video Embed section , Audio embed section 
+                    // =====Map embed & Section Heading
+                    #section-heading,
+                    #additional_text,
+                    #customize_button,
+                    #map-embed,
+                    #music-embed,
+                    #video-embed {
+                        form {
+                            padding: 5px;
+
+                            #add_text {
+                                min-height: 100px;
+                                cursor: pointer;
+                            }
+
+                            input {
+                                border: none;
+                                padding: 10px 30px;
+                                width: 100%;
+                                margin-bottom: 7px;
+                                height: 40px;
+                                flex-grow: 1;
+                                margin-left: -2px;
+                                background: $theme-color-child;
+                                border: 1px solid $theme-color-child;
+                                font-size: 15px;
+                                font-weight: 400;
+                                font-family: $paragraph-font;
+                                color: $text-color;
+                                z-index: 1;
+                                border-radius: 5px;
+                            }
+
+                            input::selection,
+                            input:focus {
+                                border: 1px solid $theme-color-child !important;
+                            }
+
+                            input::placeholder {
+                                color: $text-color;
+                                // opacity: 0.6;
+                            }
+
+                            .upload-image {
+                                width: 100%;
+                                height: 70px;
+                                // margin-bottom: 30px;
+                                margin: 5px;
+                                border-radius: 5px;
+                                text-align: center;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: $theme-color-child;
+
+                                input {
+                                    width: 100%;
+                                    height: 100%;
+                                    display: block;
+                                    display: none;
+                                }
+
+                                label {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    cursor: pointer;
+                                    width: 100%;
+                                    height: 100%;
+
+                                    i {
+                                        font-size: 40px;
+                                        color: $brand_color;
+                                    }
+
+                                }
+                            }
+                        }
+
+
+                    }
+
+                    #additional_text {
+                        #add_text {
+                            background: #fff !important;
+                        }
+                    }
+
+                    // ====== video Embed section , Audio embed section 
+                    // =====Map embed & Section Heading end
+                    // =========
+
+                    // =========
+                    // ====== Add Skill
+                    #skill-element {
+                        form {
+                            width: 100%;
+                            padding: 5px;
+
+                            // Input group  
+                            .input-group {
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: nowrap;
+                                margin: 7px 0px;
+
+                                // input filed for social account
+                                input {
+                                    border: none;
+                                    padding: 10px 30px;
+                                    width: 100%;
+                                    height: 40px;
+                                    flex-grow: 1;
+                                    margin-left: -2px;
+                                    background: $theme-color-child;
+                                    border: 1px solid $theme-color-child;
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                    font-family: $paragraph-font;
+                                    color: $text-color;
+                                    z-index: 1;
+                                    border-radius: 5px 5px 5px 5px;
+                                }
+
+                                input::selection,
+                                input:focus {
+                                    border: 1px solid $theme-color-child !important;
+                                }
+
+                                input::placeholder {
+                                    color: $text-color;
+                                    // opacity: 0.6;
+                                }
+
+                                // Delete button
+                                .delete-btn {
+                                    width: 40px;
+                                    height: 40px;
+                                    background: $brand_color;
+                                    border: 1px solid $button-bg-color;
+                                    border-radius: 5px;
+                                    flex-shrink: 0;
+                                    flex-basis: 40px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    text-align: center;
+                                    padding: 0;
+                                    margin: 0;
+                                    margin-left: 15px;
+                                    z-index: 0;
+
+                                    img {
+                                        width: 20px;
+                                        margin: 0 auto;
+                                        z-index: 0;
+                                    }
+                                }
+
+
+                            }
+
+                            // Submit button
+
+                            button {
+                                width: 170px;
+                                height: 45px;
+                                margin-top: 15px;
+                                background: $button-bg-color;
+                                color: $button-text-color;
+                                display: inline-flex;
+                                // margin: 7px;
+                                margin-top: 15px;
+                                font-size: 18px;
+                                line-height: 30px;
+                                text-align: center;
+                                justify-content: center;
+                                font-family: $paragraph-font;
+                            }
+
+                            button.add-more {
+                                margin-left: 0px;
+                                margin-right: 15px;
+                            }
+
+
+                        }
+                    }
+
+                    // ====== add skill end
+                    // =========
+                    // =========
+                    // ====== Social Accounts
+                    #experiences {
+                        // width: 100%;
+
+                        // Input group  
+                        .experieance-items {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+                            margin: 7px 0px;
+                            padding: 20px;
+                            background: $theme-color-child;
+                            border: 1px solid $theme-color-child;
+                            border-radius: 5px;
+
+
+                            // input filed for social account
+                            .container {
+                                width: 100%;
+                                flex-grow: 1;
+                                display: block;
+                                padding: 0;
+                                margin-right: 15px;
+
+                                label {
+                                    color: $text-color;
+                                    font-family: $paragraph-font;
+                                    font-size: 14px;
+                                }
+
+                                h4 {
+                                    color: $text-color;
+                                    font-family: $paragraph-font;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                    margin-top: 7px;
+
+                                }
+
+                                p {
+                                    color: $text-color;
+                                    font-family: $paragraph-font;
+                                    font-size: 14px;
+                                }
+
+                            }
+
+                            // Delete button
+                            .action-btn {
+                                width: 50px;
+                                flex-shrink: 0;
+                                flex-basis: 50px;
+                                display: block;
+
+                                button {
+                                    width: 40px;
+                                    height: 40px;
+                                    background: $brand_color;
+                                    border: 1px solid $button-bg-color;
+                                    border-radius: 5px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    text-align: center;
+                                    padding: 0;
+                                    margin: 0;
+                                    margin-bottom: 7px;
+
+                                    img {
+                                        width: 20px;
+                                        margin: 0 auto;
+                                    }
+                                }
+                            }
+                        }
+
+                        // social icon modual
+
+                        #add_exprieance {
+                            width: 100%;
+                            margin: 0px !important;
+                            padding: 0px !important;
+
+                            .modal-dialog {
+                                min-height: 100vh;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+
+                                .modal-content {
+                                    max-width: 600px !important;
+                                    width: 100%;
+
+                                    form {
+                                        width: 100%;
+                                        padding: 5px;
+                                        display: flex;
+                                        flex-direction: row;
+                                        flex-wrap: wrap;
+                                        justify-content: space-between;
+
+                                        // Input group  
+                                        .input-group {
+                                            width: 48%;
+                                            flex-flow: 1;
+                                            flex-basis: 48%;
+                                            flex-shrink: 1;
+
+                                            // social icon 
+                                            .icon {
+                                                cursor: pointer;
+                                                width: 40px;
+                                                height: 40px;
+                                                flex-shrink: 0;
+                                                border-radius: 5px 0px 0px 5px;
+                                                flex-basis: 40px;
+                                                background: $brand_color;
+                                                border: 1px solid $button-bg-color;
+                                                line-height: 30px;
+                                                text-align: center;
+                                                z-index: 1111;
+
+                                                img {
+                                                    height: 25px;
+                                                    margin: 0 auto;
+                                                    text-align: center;
+                                                }
+                                            }
+
+                                            label {
+                                                display: block;
+                                                width: 100%;
+                                                margin-left: 5px;
+                                            }
+
+
+
+
+                                        }
+
+                                        // input filed for social account
+                                        textarea,
+                                        input {
+                                            border: none;
+                                            padding: 10px 30px;
+                                            width: 100%;
+                                            height: 40px;
+                                            flex-grow: 1;
+                                            margin: 5px;
+                                            background: $theme-color-child;
+                                            border: 1px solid $theme-color-child;
+                                            font-size: 15px;
+                                            font-weight: 400;
+                                            font-family: $paragraph-font;
+                                            color: $text-color;
+                                            z-index: 1;
+                                            border-radius: 5px;
+                                        }
+
+                                        textarea {
+                                            height: auto;
+                                        }
+
+                                        textarea::placeholder,
+                                        input::selection,
+                                        input:focus {
+                                            border: 1px solid $theme-color-child !important;
+                                            color: $text-color;
+                                        }
+
+                                        input::placeholder {
+                                            color: $text-color;
+                                            // opacity: 0.6;
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // ====== Social Accounts end
+                    // =========
+
+
+
+                }
+
+            }
+
+            //=======right side
+            .right-side {
+                position: relative;
+                width: 100%;
+                max-width: 300px;
+                flex-shrink: 1;
+                margin: 0;
+                margin-left: 30px;
+                z-index: 0;
+
+
+                .qr_infomation {
+                    width: 100%;
+                    max-width: 300px;
+                    padding: 20px;
+                    background: $theme-color-child;
+                    border-radius: 15px;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+                    z-index: 0;
+
+                    h2 {
+                        font-size: 23px;
+                        color: $text-color;
+                        font-family: $paragraph-font;
+                        font-weight: 600;
+                    }
+
+                    // PROFILE QR CODE
+                    .qr-code {
+                        margin-top: 30px;
+
+                        i {
+                            width: 90%;
+                            height: 90%;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    // QR CODE DOWNLOAD OPTION
+                    ul {
+                        margin: 0;
+                        width: 100%;
+                        margin-top: 30px;
+                        padding: 0px;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        align-items: center;
+                        // justify-content: space-between;
+
+                        p {
+                            margin: 0;
+                            font-size: 20px;
+                            color: $text-color;
+                            font-family: $paragraph-font;
+                            font-weight: 600;
+                        }
+
+                        button {
+                            width: 50px;
+                            height: 40px;
+                            line-height: 30px;
+                            margin: 0;
+                            padding: 0;
+                            border: none;
+                            background: $brand_color;
+                            font-size: 13px;
+                            color: $button-text-color;
+                            font-family: $paragraph-font;
+                            font-weight: 500;
+                            z-index: 1111;
+
+                        }
+
+                        .items {
+                            margin: 5px;
+                        }
+                    }
+
+                    // PROFILE URL
+                    .text-group {
+                        display: flex;
+                        width: 100%;
+                        margin-top: 10px;
+
+                        p {
+                            width: 100%;
+                            height: 40px;
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            background: $theme-color-main;
+                            color: $text-color;
+                            font-size: 13px;
+                            font-weight: 400;
+                            overflow: hidden;
+                            font-family: $paragraph-font;
+
+                        }
+
+                        button {
+                            width: 40px;
+                            height: 40px;
+                            line-height: 30px;
+                            margin: 0;
+                            margin-left: 10px;
+                            padding: 0;
+                            border: none;
+                            background: $brand_color;
+
+                            svg {
+                                height: 15px;
+                                line-height: 30px;
+                                fill: $button-text-color;
+                            }
+                        }
+                    }
+                }
+
+                //action button
+                button.qr_infotmation_popup_btn {
+                    width: 55px;
+                    height: 55px;
+                    border-radius: 100%;
+                    background: $brand_color;
+                    border: none;
+                    text-align: center;
+                    box-shadow: rgba(0, 0, 0, 0.08);
+                    position: fixed;
+                    bottom: 30px;
+                    right: 30px;
+                    z-index: 1111;
+                    // display: none;
+
+                    i {
+                        color: $button-text-color;
+                        font-size: 30px;
+                        display: none;
+                    }
+
+                    i.active {
+                        display: block;
+                    }
+                }
+
+
+
+            }
+
+        }
+    }
+}
+
+// ===== Edit page end
+// Dashboard page
+#dashboard {
+    .card_box {
+        padding-top: 20px;
+        padding-bottom: 40px;
+
+        .card {
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+
+
+            .icon_box {
+                background: $brand_color;
+                width: 45px;
+                height: 45px;
+                flex-basis: 45px;
+                border-radius: 5px;
+                text-align: center;
+
+
+                i {
+                    line-height: 45px;
+                    font-size: 25px;
+                    color: $button-text-color;
+                }
+            }
+
+            .text-box {
+                margin-top: -5px;
+                margin-left: 20px;
+                flex-flow: 1;
+                flex-grow: 1;
+                display: block;
+
+                label {
+                    display: block;
+                    font-size: 15px;
+                    line-height: 30px;
+                    font-family: $paragraph-font;
+                    color: rgba($text-color, 0.7);
+                }
+
+                span {
+                    display: block;
+                    font-size: 15px;
+                    font-family: $paragraph-font;
+                    color: rgba($text-color, 0.7);
+                }
+
+                .number {
+                    display: block;
+                    font-size: 25px;
+                    font-family: $paragraph-font;
+                    color: $brand_color;
+                    font-weight: 700;
+                }
+
+            }
+        }
+    }
+}
+
+// Dashboard page end
+// Gallery page
+
+#gallery_page {
+
+    // LEFT SIDE
+    .left-side {
+        z-index: 0 !important;
+        overflow: hidden;
+
+
+        // image gallery
+        .img_gallery {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            overflow: hidden;
+            z-index: 1;
+
+            .images-items {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                z-index: 1;
+
+                .img_items {
+                    width: 150px;
+                    height: 150px;
+                    min-width: 150px;
+                    flex-flow: 1;
+                    flex-basis: content;
+                    background-position: center;
+                    background-size: cover;
+                    margin: 7px;
+                    border-radius: 5px;
+                    z-index: 1;
+                    position: relative;
+                    cursor: pointer;
+
+                    button.delete_img {
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 7px;
+                        border: none;
+                        border-radius: 3px;
+                        background: $button-bg-color;
+                        padding: 10px;
+                        visibility: hidden;
+                        transition: all 0.2s ease-in-out;
+                        opacity: 0;
+
+                        svg {
+                            width: 10px;
+                        }
+                    }
+                }
+
+            }
+
+            .img_items:hover button.delete_img {
+
+                visibility: visible;
+                opacity: 1;
+                transition: all 0.2s ease-in-out;
+            }
+
+            // upload images
+            .upload-image {
+                margin: 7px;
+                width: 150px;
+                height: 150px;
+                min-width: 150px;
+                flex-basis: content;
+                border-radius: 5px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $theme-color-main;
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    display: none;
+                }
+
+                label {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    width: 100%;
+                    height: 100%;
+
+                    i {
+                        font-size: 40px;
+                    }
+
+                }
+            }
+
+            // save changes button
+            .save_changes {
+                width: 100%;
+                flex-flow: 1;
+                display: block;
+                background: $button-bg-color;
+                font-size: 18px;
+                font-family: $paragraph-font;
+                font-weight: 500;
+                color: $button-text-color;
+                border: none;
+                margin-top: 15px;
+                padding: 10px;
+
+            }
+        }
+
+
+    }
+
+}
+
+// ===== Gallery page end
+// Contact List page
+
+#contact_page {
+
+    .contact_list-container {
+        padding-top: 30px;
+    }
+
+    #contact_table {
+        color: $text-color;
+
+        // border: 0.5px solid $text-color;
+        tr {
+            color: $text-color;
+            display: flex;
+            flex-direction: row;
+
+            th {
+                text-align: center;
+                color: $text-color;
+            }
+
+            td {
+                text-align: center;
+                color: $text-color;
+
+            }
+        }
+
+
+        thead {
+            tr {
+                th {
+                    width: 50%;
+                    flex-flow: 1;
+                    flex-shrink: 1;
+                }
+
+                th:first-child {
+                    width: 20px;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    width: 50%;
+                    flex-flow: 1;
+                    flex-shrink: 1;
+                }
+
+                td:first-child {
+                    width: 20px;
+                }
+
+                td.action {
+                    padding: 0px 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    button,
+                    a {
+                        background: $button-bg-color;
+                        text-decoration: none;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 3px;
+                        text-align: center;
+                        display: flex;
+                        align-self: center;
+                        justify-content: center;
+                        padding: 0px;
+                        margin: 5px;
+
+                        svg {
+                            height: 15px;
+                            line-height: 30px;
+                            margin-top: 7px;
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    #contact_table_info,
+    label,
+    div.dataTables_wrapper div.dataTables_filter label {
+        color: $text-color !important;
+    }
+}
+
+// ===== Contact List page end
+// Personalize page
+
+#personalize_page {
+
+    .personalize_container {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        .input_group {
+            width: 46%;
+            flex-basis: 46%;
+            flex-flow: 1;
+            flex-shrink: 1;
+            display: block;
+
+            label {
+                display: block;
+                width: 100%;
+                color: $text-color;
+                padding-top: 10px;
+                font-size: 16px;
+                font-family: $paragraph-font;
+            }
+
+            input {
+                margin-top: 7px;
+                width: 100%;
+                height: 40px;
+                border: none;
+                outline: none;
+                border-radius: 5px !important;
+            }
+        }
+
+        ul.gradiant_theme_color {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            padding-left: 0px;
+
+            li {
+                list-style: none;
+                width: 100%;
+                max-width: 70px;
+                height: 70px;
+                // flex-grow: 1;
+                margin: 7px;
+                // flex-basis: 70px;
+                background: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 18px;
+                color: #fff;
+                border-radius: 5px;
+                box-shadow: 0, 0, 5px rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+            }
+
+            li.active {
+                border: 2px solid rgba(0, 0, 0, 0.6);
+                box-shadow: 0, 0, 10px rgba(0, 0, 0, 0.2);
+            }
+
+            li.bg1 {
+                background: #16A085;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #F4D03F, #16A085);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #F4D03F, #16A085);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            li.bg2 {
+                background: #D31027;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #EA384D, #D31027);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #EA384D, #D31027);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            li.bg3 {
+                background: #DA22FF;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #9733EE, #DA22FF);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #9733EE, #DA22FF);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            li.bg4 {
+                background: #348F50;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #56B4D3, #348F50);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #56B4D3, #348F50);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            li.bg5 {
+                background: #3CA55C;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #B5AC49, #3CA55C);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #B5AC49, #3CA55C);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            li.bg6 {
+                background: #E55D87;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #5FC3E4, #E55D87);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #5FC3E4, #E55D87);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            li.bg7 {
+                background: #FF512F;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #DD2476, #FF512F);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #DD2476, #FF512F);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            li.bg8 {
+                background: #AA076B;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #61045F, #AA076B);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #61045F, #AA076B);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            li.bg9 {
+                background: #1A2980;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #26D0CE, #1A2980);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            li.bg10 {
+                background: #DD5E89;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #F7BB97, #DD5E89);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+        }
+
+        .font-selection {
+            display: flex;
+            flex-direction: row;
+
+            .items {
+                margin: 10px;
+
+                label {
+                    display: block;
+                }
+            }
+
+            select {
+                width: 180px;
+                height: 40px;
+                align-self: flex-start;
+            }
+        }
+
+        h3 {
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-family: $paragraph-font;
+            font-weight: 500;
+            font-size: 30px;
+            color: $text-color;
+        }
+
+
+    }
+}
+
+// ===== Personalize page end
+// Billing page
+
+#billing {
+    .payment_card_invoices {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        // payment info card
+        .payment_info-box {
+            width: 45%;
+            max-height: 285px;
+            flex-flow: 1;
+            flex-shrink: 1;
+            flex-basis: 45%;
+            border-radius: 10px;
+            padding: 40px;
+            background: $theme-color-main;
+
+            .card_top {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                h3 {
+                    font-family: $paragraph-font;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    color: $text-color;
+                }
+
+                button {
+                    background: none;
+                    color: $button-bg-color;
+                    font-family: $paragraph-font;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    border: none;
+                    padding: 0px;
+                    margin: 0px;
+                }
+            }
+
+            .card_info {
+                width: 260px;
+                margin-bottom: 55px;
+
+                .card_number {
+                    width: 260px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .payment_icon {
+                        height: 25px;
+                        margin-right: 10px;
+                    }
+
+                    .dots {
+                        margin-right: 10px;
+                    }
+
+                    h4.card_last4_dig {
+                        font-family: $paragraph-font;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: $text-color;
+                        margin-top: 6px;
+                    }
+                }
+
+                h3.card_footer {
+                    width: 260px;
+                    text-align: right;
+                    font-family: $paragraph-font;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 13px;
+                    color: $text-color;
+
+                }
+            }
+
+            .card_footer {
+                font-family: $paragraph-font;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                color: $text-color;
+            }
+        }
+
+        // transections history
+        .transection_card {
+            width: 45%;
+            max-height: 285px;
+            flex-flow: 1;
+            flex-shrink: 1;
+            flex-basis: 45%;
+            border-radius: 10px;
+            padding: 40px;
+            background: $theme-color-main;
+
+            .card_top {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                h3 {
+                    font-family: $paragraph-font;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    color: $text-color;
+                }
+
+                a {
+                    background: none;
+                    color: $button-bg-color;
+                    font-family: $paragraph-font;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    border: none;
+                    padding: 0px;
+                    margin: 0px;
+                }
+            }
+
+            table {
+                border: none;
+                width: 100%;
+
+                tr {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .items {
+                        font-family: $paragraph-font;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 15px;
+                        color: $text-color;
+                        align-items: center;
+                        margin-bottom: 7px;
+
+                        button {
+                            background: $button-bg-color;
+                            border: none;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 3px;
+                            padding: 0px;
+                            margin: 0px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            svg {
+                                height: 20px;
+                            }
+                        }
+                    }
+
+                    .items:nth-child(1) {
+                        width: 55%;
+                        flex-basis: 55%;
+                    }
+
+                    .items:nth-child(2) {
+                        width: 30%;
+                        flex-basis: 30%;
+                    }
+
+                    .items:nth-child(3) {
+                        width: 15%;
+                        flex-basis: 20%;
+                    }
+
+                    th {
+                        font-weight: 600;
+                        font-size: 18px;
+                        padding-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // PRICING CONTAINER
+    .heading {
+        padding: 40px 0px;
+        font-family: $paragraph-font;
+        font-weight: 500;
+        font-size: 35px;
+        color: $text-color;
+    }
+
+    .pricing_container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+
+        .pricing_card {
+            width: 30%;
+            flex-basis: 30%;
+            flex-flow: 1;
+            flex-shrink: 1;
+            background: $theme-color-main;
+            padding: 30px;
+            border-radius: 10px;
+
+            h2 {
+                font-family: $paragraph-font;
+                font-weight: 700;
+                font-size: 23px;
+                color: $text-hover-color;
+            }
+
+            p {
+                font-family: $paragraph-font;
+                font-weight: 500;
+                font-size: 14px;
+                color: $text-color;
+            }
+
+            label {
+                font-family: $paragraph-font;
+                font-weight: 700;
+                font-size: 14px;
+                color: $text-hover-color;
+            }
+
+            ul {
+                margin-top: 15px;
+                padding: 0px;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+                    font-family: $paragraph-font;
+                    font-weight: 500;
+                    font-size: 14px;
+                    color: $text-color;
+                    margin: 0px;
+                    padding: 0px;
+                    margin-bottom: 7px;
+
+                    img {
+                        margin-right: 7px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+
+            button {
+                width: 100%;
+                display: block;
+                background: $button-bg-color;
+                font-family: $paragraph-font;
+                font-weight: 500;
+                font-size: 14px;
+                color: $button-text-color;
+                text-align: center;
+                padding: 10px 0px;
+                border: none;
+                outline: none;
+                border-radius: 3px;
+                margin-top: 15px;
+            }
+        }
+
+        .pricing_card.active {
+            button {
+                opacity: 0.5;
+                cursor: none;
+            }
+        }
+    }
+
+}
+
+// ===== Billing page end
+// All transections page
+
+#invoices {
+
+    // transections history
+    .transection_card {
+        margin-top: 40px;
+        width: 100%;
+
+        .card_top {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+
+            h3 {
+                width: 80%;
+                font-family: $paragraph-font;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                color: $text-color;
+            }
+
+            button {
+                background: none;
+                color: $button-bg-color;
+                font-family: $paragraph-font;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                border: none;
+                padding: 0px;
+                margin: 0px;
+                text-align: left;
+            }
+        }
+
+        table {
+            border: none;
+            width: 100%;
+
+            tr {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+
+                .items {
+                    font-family: $paragraph-font;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: $text-color;
+                    align-items: center;
+                    margin-bottom: 7px;
+
+                    button {
+                        background: $button-bg-color;
+                        border: none;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 3px;
+                        padding: 0px;
+                        margin: 0px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        svg {
+                            height: 20px;
+                        }
+                    }
+                }
+
+                .items:nth-child(1) {
+                    width: 55%;
+                    flex-basis: 55%;
+                }
+
+                .items:nth-child(2) {
+                    width: 30%;
+                    flex-basis: 30%;
+                }
+
+                .items:nth-child(3) {
+                    width: 15%;
+                    flex-basis: 20%;
+                }
+
+                th {
+                    font-weight: 600;
+                    font-size: 18px;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+// ===== integrations page style
+#integrations {
+    .intregration_box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    button.custom-domain {
+        width: 100%;
+        flex-basis: 30%;
+        flex-grow: 1;
+        flex-flow: 1;
+        background: $button-bg-color;
+        color: $button-text-color;
+        margin-top: 10px;
+        height: 50px;
+        line-height: 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        font-family: $paragraph-font;
+    }
+
+    .modal {
+        input {
+            display: block;
+            width: 100% !important;
+            height: 40px;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: #000;
+            border: none;
+            background: #fff;
+            font-size: 14px;
+            font-family: $paragraph-font;
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+
+        label {
+            font-size: 14px;
+            color: $text-color;
+            line-height: 20px;
+            font-family: $paragraph-font;
+
+
+        }
+
+        p {
+            font-size: 14px;
+            color: $text-color;
+            line-height: 18px;
+            font-family: $paragraph-font;
+
+
+        }
+
+        button.btn3 {
+            width: 100%;
+            background: $button-bg-color;
+            color: $button-text-color;
+            display: block;
+            margin-top: 10px;
+            height: 50px;
+            line-height: 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            font-family: $paragraph-font;
+        }
+    }
+
+
+}
+
+// ===== integrations page style end
+// ======ADD NEW STAFF PAGE STYLE
+#add_staff {
+    form {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 0;
+
+        input {
+            margin: 5px;
+            width: 48%;
+            height: 40px;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: $text-color;
+            border: none;
+            background: $theme-color-main;
+            flex-grow: 1;
+            flex-shrink: 1;
+            font-size: 14px;
+            font-family: $paragraph-font;
+
+        }
+
+        input::selection,
+        input:focus {
+            border: none;
+        }
+
+        input::placeholder {
+            color: $text-color;
+        }
+
+        .upload-image {
+            width: 100%;
+            // cursor: pointer;
+            height: 70px;
+            // margin-bottom: 30px;
+            margin: 5px;
+            border-radius: 5px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $theme-color-main;
+
+            input {
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                display: none;
+            }
+
+            label {
+                width: 100%;
+                height: 100%;
+                display: block;
+                cursor: pointer;
+
+                i {
+                    font-size: 40px;
+                    color: $brand_color;
+                }
+            }
+        }
+
+        button {
+            z-index: 1;
+        }
+
+
+    }
+}
+
+
+// ======STAFF PAGE STYLE
+#staff_page {
+
+    .dataTables_info,
+    label {
+        color: $text-color;
+    }
+
+    table {
+        th {
+            color: $text-color;
+        }
+
+        td {
+            color: $text-color;
+
+            button {
+                background: $brand_color;
+                color: $button-text-color;
+
+                i {
+                    font-size: 20px;
+                    color: $button-text-color;
+                }
+            }
+        }
+
+        .profile_img {
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+
+            }
+        }
+
+    }
+}
+
+// ======== USER EDIT PAGE
+#profileEdit_page {
+
+    .container {
+        max-width: 800px;
+
+        label {
+            margin-bottom: 5px;
+            font-family: $paragraph-font;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+    }
+
+    // Cover picture css
+    .coverPicture {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        max-height: 220px;
+        position: relative;
+        border-radius: 5px 5px 5px 5px;
+
+        // COVER PICTURE PREVIEW
+        #coverPreview {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            position: relative;
+            z-index: 0;
+            border-radius: 5px 5px 0px 0px;
+        }
+
+        label {
+            width: 100%;
+            display: block;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 8px;
+            text-align: right;
+            font-size: 14px;
+            visibility: hidden;
+            opacity: 0;
+            cursor: pointer;
+            margin-top: -45px;
+            z-index: 111;
+            position: absolute;
+            color: #fff;
+            transform: translate(0px, 60px);
+            transition: 0.2s all ease-in-out;
+
+        }
+
+        input {
+            display: none;
+
+        }
+    }
+
+    .coverPicture:hover label {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.2s all ease-in-out;
+        transform: translate(0px, 0px);
+    }
+
+    // Profile picture
+    .profilePicture {
+        width: 100%;
+        max-width: 180px;
+        height: 180px;
+        position: relative;
+        padding-bottom: 150px;
+        margin-top: -80px;
+        margin-left: 30px;
+        overflow: hidden;
+        border-radius: 100%;
+
+        // COVER PICTURE PREVIEW
+        #profilePreview {
+            width: 100%;
+            max-width: 180px;
+            height: 180px;
+            object-fit: cover;
+            position: relative;
+            border-radius: 100%;
+            overflow: hidden;
+            z-index: 111;
+
+
+        }
+
+        label {
+            width: 100%;
+            /* display: block; */
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 9px;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            cursor: pointer;
+            margin-top: 142px;
+            z-index: 1100;
+            position: absolute;
+            color: #fff;
+            transform: translate(0px, 60px);
+            transition: 0.2s all ease-in-out;
+        }
+
+        input {
+            display: none;
+
+        }
+    }
+
+    .profilePicture:hover label {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.2s all ease-in-out;
+        transform: translate(0px, 0px);
+    }
+
+
+}
+
+
+// ========= MEDIA Queris
+// =====CSS BRAKING-POINTS
+
+
+// ========= MEDIA Queris 
+// =====CSS BRAKING-POINTS
+
+// ==============================================
+// ===========USER CONTROL PANEL ====== END======
+// ==============================================

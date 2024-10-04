@@ -1,0 +1,445 @@
+@media (min-width: 1200px) {
+    button.qr_infotmation_popup_btn {
+        display: none;
+    }
+}
+
+@media (max-width: 1199.98px) {
+
+    .wrapper {
+
+        .main-container {
+            padding: 0px 15px;
+        }
+
+        //=======right side
+        .right-side {
+            position: fixed !important;
+            width: 100%;
+            bottom: 0;
+            right: 0;
+
+            .qr_infomation {
+                position: fixed;
+                right: -380px;
+                bottom: 70px;
+                transition: 0.2s all ease-in-out;
+                // display: none;
+                z-index: 111;
+
+            }
+
+            .qr_infomation.active {
+                position: fixed;
+                right: 30px;
+                bottom: 70px;
+                // display: none;
+                transition: 0.2s all ease-in-out;
+
+            }
+
+        }
+    }
+
+    // ===== Personalize page end
+    // Billing page
+    #billing {
+        .payment_card_invoices {
+            overflow: hidden;
+
+            // payment info card
+            .payment_info-box {
+                width: 48%;
+                max-height: 285px;
+                flex-basis: 48%;
+                min-width: 400px;
+                flex-shrink: 1;
+                padding: 30px;
+                margin-bottom: 30px;
+                margin-right: 15px;
+
+                .card_top {
+
+                    padding-bottom: 0px;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    button {
+                        font-size: 20px;
+                    }
+                }
+
+                .card_info {
+                    width: 260px;
+                    margin-bottom: 30px;
+
+                    .card_number {
+                        width: 260px;
+
+                        .payment_icon {
+                            height: 25px;
+                            margin-right: 10px;
+                        }
+
+                        .dots {
+                            margin-right: 10px;
+                        }
+
+                        h4.card_last4_dig {
+                            font-size: 18px;
+                        }
+                    }
+
+                    h3.card_footer {
+                        font-size: 13px;
+
+                    }
+                }
+
+                .card_footer {
+                    font-size: 15px;
+                }
+            }
+
+            // transections history
+            .transection_card {
+                width: 48%;
+                max-height: 285px;
+                flex-basis: 48%;
+                flex-grow: 1;
+                flex-flow: 1;
+
+                .card_top {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    a {
+                        font-size: 20px;
+                    }
+                }
+
+            }
+        }
+
+        // PRICING CONTAINER
+        .heading {
+            padding: 40px 10px;
+            padding-bottom: 20px;
+            font-size: 35px;
+        }
+
+        .pricing_container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+
+            .pricing_card {
+                width: 33%;
+                flex-basis: 31%;
+                min-width: 255px;
+                flex-grow: 1;
+                flex-flow: 1;
+                flex-shrink: 1;
+                padding: 30px;
+                margin: 10px;
+                border-radius: 10px;
+
+                h2 {
+                    font-size: 23px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+
+                label {
+                    font-size: 14px;
+                }
+
+                ul {
+                    margin-top: 15px;
+                    padding: 0px;
+
+                    li {
+                        font-size: 14px;
+                    }
+                }
+
+                button {
+                    font-size: 14px;
+                }
+            }
+
+            .pricing_card.active {
+                button {
+                    opacity: 0.5;
+                    cursor: none;
+                }
+            }
+        }
+    }
+}
+
+// small device
+@media (min-width: 768px) {
+    header {
+        .side_menu-bar {
+
+            .mobile_menu {
+                display: none;
+            }
+        }
+    }
+
+}
+
+// small device
+@media (max-width: 767.98px) {
+
+    .wrapper {
+
+        // main container
+        .main-container {
+            padding: 5px;
+            padding-top: 40px;
+
+            .container {
+                margin-top: 30px;
+            }
+        }
+
+        header {
+            width: 100%;
+            padding: 10px;
+
+            .side_menu-bar {
+
+                .desktop_menu {
+                    display: none;
+                }
+            }
+        }
+
+        // left side menu
+        .left-menu {
+            display: none;
+        }
+
+        //=====left side home page
+        .left-side {
+            padding: 8px !important;
+            padding-top: 15px;
+            overflow: auto;
+
+            .embaded-component {
+                .accordion-header {
+                    h2 {
+                        font-size: 16px !important;
+                    }
+                }
+
+            }
+
+            // =========
+            // ====== Social Accounts
+            #social-accounts {
+                form {
+
+                    button {
+                        width: 45% !important;
+                        flex-grow: 1;
+                        flex-flow: 1;
+                        height: 40px;
+                        margin-top: 15px;
+                        font-size: 16px;
+                        justify-content: space-between;
+                    }
+
+                    button.add-more {
+                        margin-left: 0px;
+                        margin-right: 7px !important;
+                    }
+
+
+                }
+
+            }
+
+            // ====== Social Accounts end
+            // =========
+
+            // =========
+            // ====== Social Accounts
+            #skill-element {
+                form {
+
+                    button {
+                        width: 45% !important;
+                        flex-grow: 1;
+                        flex-flow: 1;
+                        height: 40px;
+                        margin-top: 15px;
+                        font-size: 16px;
+                        justify-content: space-between;
+                    }
+
+                    button.add-more {
+                        margin-left: 0px;
+                        margin-right: 7px !important;
+                    }
+
+
+                }
+
+            }
+
+            // ====== Social Accounts end
+            // =========
+
+
+
+        }
+
+
+    }
+
+    .wrapper .main-container .container .left-side .embaded-component .accordion-item {
+        margin: 0px;
+        margin-bottom: 15px;
+    }
+
+    .wrapper .main-container .container .left-side .embaded-component .accordion-header i {
+        margin-right: 10px;
+    }
+
+    // ======STAFF PAGE STYLE
+    #staff_page {
+
+        .contact_list-container {
+            overflow-x: scroll !important;
+        }
+
+        table {
+            overflow-x: scroll !important;
+
+            th {
+                font-size: 14px;
+            }
+
+            td {
+                font-size: 13px;
+
+                button {
+                    padding: 5px !important;
+                    border-radius: 0px !important;
+                    margin: 5px;
+
+                    i {
+                        font-size: 15px !important;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+
+    // ===== Personalize page end
+    // Billing page
+    #billing {
+        .payment_card_invoices {
+
+            // payment info card
+            .payment_info-box {
+                width: 100%;
+                max-height: 285px;
+                max-width: 400px;
+                flex-basis: 100%;
+                padding: 30px;
+                margin-bottom: 30px;
+
+                .card_top {
+
+                    padding-bottom: 0px;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    button {
+                        font-size: 20px;
+                    }
+                }
+
+                .card_info {
+                    width: 260px;
+                    margin-bottom: 30px;
+
+                    .card_number {
+                        width: 260px;
+
+                        .payment_icon {
+                            height: 25px;
+                            margin-right: 10px;
+                        }
+
+                        .dots {
+                            margin-right: 10px;
+                        }
+
+                        h4.card_last4_dig {
+                            font-size: 18px;
+                        }
+                    }
+
+                    h3.card_footer {
+                        font-size: 13px;
+
+                    }
+                }
+
+                .card_footer {
+                    font-size: 15px;
+                }
+            }
+
+            // transections history
+            .transection_card {
+                width: 100%;
+                max-height: 285px;
+                flex-basis: 100%;
+
+                .card_top {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    a {
+                        font-size: 20px;
+                    }
+                }
+
+            }
+        }
+    }
+
+}

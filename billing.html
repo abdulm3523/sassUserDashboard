@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="jquery-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <div class="wrapper" id="billing">
+
+        <!-- Top header -->
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="assest/icons/tapone-logo.svg" alt="">
+                </div>
+                <!-- MENU TOGOLLER BUTTON -->
+                <button class="menu-toggoler">
+                    <i class="ri-menu-2-line"></i>
+                    <img src="assest/images/user-profile.png" alt="">
+                </button>
+
+                <!-- SIDEBAR MENU FOR MOBILE & DESKTOP -->
+                <div class="side_menu-bar">
+                    <!--  -->
+                    <div class="desktop_menu">
+                        <ul>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-user-line"></i>
+                                    <span>My profile</span>
+                                </a>
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-question-answer-line"></i>
+                                    <span>Support</span>
+                                </a>
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-notification-badge-line"></i>
+                                    <span>Whats New</span>
+                                </a>
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-flashlight-line"></i>
+                                    <span>Feature Request</span>
+                                </a>
+
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-question-line"></i>
+                                    <span>Help Center</span>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                    <nav class="mobile_menu">
+                        <button class="menu-toggoler">
+                            <i class="ri-close-line"></i>
+                        </button>
+                        <ul>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-user-line"></i>
+                                    <span>My profile</span>
+                                </a>
+                            </li>
+                            <li> <a href="dashboard.html">
+                                    <i class="ri-dashboard-line"></i>
+                                    <span>Dashboard</span> </a>
+                            </li>
+                            <li> <a href="index.html">
+                                    <i class="ri-edit-box-line"></i>
+                                    <span>Edit</span> </a></li>
+                            <li> <a href="addstaff.html">
+                                    <i class="ri-user-add-line"></i> <span>Add
+                                        Staff</span>
+                                </a>
+                            </li>
+                            <li> <a href="staff.html">
+                                    <i class="ri-team-line"></i> <span>Team Members</span>
+                                </a>
+                            </li>
+                            <li> <a href="gallery.html">
+                                    <i class="ri-gallery-line"></i> <span>Gallery</span>
+                                </a>
+                            </li>
+                            <li> <a href="contacts.html">
+                                    <i class="ri-contacts-line"></i>
+                                    <span>Contacts</span>
+                                </a>
+                            </li>
+                            <li> <a href="integrations.html">
+                                    <i class="ri-flashlight-line"></i>
+                                    <span>Integration</span> </a>
+                            </li>
+                            <li> <a href="personalize.html">
+                                    <i class="ri-brush-line"></i>
+                                    <span>Personalize</span> </a></li>
+                            <li class="active"> <a href="billing.html">
+                                    <i class="ri-money-dollar-box-line"></i>
+                                    <span>Billing</span>
+                                </a>
+                            </li>
+                            <li> <a href="#">
+                                    <i class="ri-logout-box-line"></i> <span>Logout</span> </a></li>
+
+                            <p>Important Links</p>
+
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-question-answer-line"></i>
+                                    <span>Support</span>
+                                </a>
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-notification-badge-line"></i>
+                                    <span>Whats New</span>
+                                </a>
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-flashlight-line"></i>
+                                    <span>Feature Request</span>
+                                </a>
+
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-question-line"></i>
+                                    <span>Help Center</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div><!-- SIDEBAR MENU FOR MOBILE & DESKTOP END-->
+
+            </div>
+
+        </header>
+        <!-- Top header end -->
+        <!-- main container -->
+        <div class="main-container">
+            <!-- LEFT MENU -->
+            <div class="left-menu">
+                <!-- Main menu -->
+                <nav>
+                    <ul>
+                        <li> <a href="dashboard.html">
+                                <i class="ri-dashboard-line"></i>
+                                <span>Dashboard</span> </a>
+                        </li>
+                        <li> <a href="index.html">
+                                <i class="ri-edit-box-line"></i>
+                                <span>Edit</span> </a></li>
+                        <li> <a href="addstaff.html">
+                                <i class="ri-user-add-line"></i> <span>Add
+                                    Staff</span>
+                            </a>
+                        </li>
+                        <li> <a href="staff.html">
+                                <i class="ri-team-line"></i> <span>Team Members</span>
+                            </a>
+                        </li>
+                        <li> <a href="gallery.html">
+                                <i class="ri-gallery-line"></i> <span>Gallery</span>
+                            </a>
+                        </li>
+                        <li> <a href="contacts.html">
+                                <i class="ri-contacts-line"></i>
+                                <span>Contacts</span>
+                            </a>
+                        </li>
+                        <li> <a href="integrations.html">
+                                <i class="ri-flashlight-line"></i>
+                                <span>Integration</span> </a>
+                        </li>
+                        <li> <a href="personalize.html">
+                                <i class="ri-brush-line"></i>
+                                <span>Personalize</span> </a></li>
+                        <li class="active"> <a href="billing.html">
+                                <i class="ri-money-dollar-box-line"></i>
+                                <span>Billing</span>
+                            </a>
+                        </li>
+                        <li> <a href="#">
+                                <i class="ri-logout-box-line"></i> <span>Logout</span> </a></li>
+
+                    </ul>
+                </nav>
+
+            </div><!-- LEFT MENU END-->
+            <!-- CONTAIENR -->
+            <div class="container">
+                <!-- left side main content -->
+                <div class="left-side">
+                    <h2 class="page_title">Billing</h2>
+
+                    <!-- PAYMENT CARD & INVOICE CONTAINER -->
+                    <div class="payment_card_invoices">
+                        <!-- CRADIT OR DEBIT CARD -->
+                        <div class="payment_info-box">
+                            <div class="card_top">
+                                <h3>Payment details</h3>
+                                <Button type="button" class="btn">Edit</Button>
+                            </div>
+                            <div class="card_info">
+                                <!-- Card number -->
+                                <div class="card_number">
+                                    <img class="payment_icon" src="assest/icons/mastar-card.svg" alt="">
+                                    <img class="dots" src="assest/icons/dots.svg" alt="">
+                                    <h4 class="card_last4_dig">3456</h4>
+                                </div>
+                                <!-- Card Expire date -->
+                                <h3 class="card_footer">
+                                    MasterCard - Expires 05/21
+                                </h3><!-- Card Expire date end-->
+                            </div>
+                            <!-- Card Expire date -->
+                            <div class="card_footer">
+                                Your Next Billing On <br>
+                                <span>July 01, 2023</span>
+                            </div><!-- Card Expire date end-->
+                        </div><!-- CRADIT OR DEBIT CARD END-->
+
+                        <!-- TRANSECTION HISTORY Card-->
+
+                        <div class="transection_card">
+                            <div class="card_top">
+                                <h3>Invoices</h3>
+                                <a href="alltransections.html" type="button" class="btn">View All</a>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th class="items">Date</th>
+                                    <th class="items">Amount</th>
+                                    <th class="items">Action</th>
+                                </tr>
+                                <tr>
+                                    <td class="items">Jan 01, 2023</td>
+                                    <td class="items">$10</td>
+                                    <td class="items">
+                                        <button type="button">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 7.40778V14.5186C0 14.9115 0.183229 15.2883 0.509379 15.5661C0.83553 15.8439 1.27788 16 1.73913 16H14.2609C14.7221 16 15.1645 15.8439 15.4906 15.5661C15.8168 15.2883 16 14.9115 16 14.5186V7.40778C16 7.01489 15.8168 6.63808 15.4906 6.36026C15.1645 6.08245 14.7221 5.92637 14.2609 5.92637H12.1739C11.8972 5.92637 11.6318 6.02001 11.4361 6.18671C11.2404 6.3534 11.1304 6.57948 11.1304 6.81522C11.1304 7.05096 11.2404 7.27704 11.4361 7.44373C11.6318 7.61042 11.8972 7.70407 12.1739 7.70407H13.913V14.2223H2.08696V7.70407H3.82609C4.10283 7.70407 4.36825 7.61042 4.56394 7.44373C4.75963 7.27704 4.86957 7.05096 4.86957 6.81522C4.86957 6.57948 4.75963 6.3534 4.56394 6.18671C4.36825 6.02001 4.10283 5.92637 3.82609 5.92637H1.73913C1.27788 5.92637 0.83553 6.08245 0.509379 6.36026C0.183229 6.63808 0 7.01489 0 7.40778ZM10.74 4.48125L9.04348 3.0376V9.18548C9.04348 9.42122 8.93354 9.6473 8.73785 9.814C8.54216 9.98069 8.27675 10.0743 8 10.0743C7.72325 10.0743 7.45784 9.98069 7.26215 9.814C7.06646 9.6473 6.95652 9.42122 6.95652 9.18548V3.0376L5.26 4.48347C5.16294 4.56615 5.0477 4.63173 4.92088 4.67648C4.79406 4.72123 4.65814 4.74426 4.52087 4.74426C4.3836 4.74426 4.24767 4.72123 4.12085 4.67648C3.99403 4.63173 3.8788 4.56615 3.78174 4.48347C3.68468 4.40079 3.60768 4.30263 3.55515 4.1946C3.50262 4.08658 3.47558 3.97079 3.47558 3.85387C3.47558 3.73694 3.50262 3.62116 3.55515 3.51313C3.60768 3.4051 3.68468 3.30694 3.78174 3.22426L7.26 0.26143C7.35694 0.178566 7.47214 0.112817 7.59897 0.0679552C7.72581 0.0230931 7.86179 0 7.99913 0C8.13647 0 8.27245 0.0230931 8.39929 0.0679552C8.52613 0.112817 8.64132 0.178566 8.73826 0.26143L12.2165 3.22426C12.3136 3.30694 12.3906 3.4051 12.4431 3.51313C12.4956 3.62116 12.5227 3.73694 12.5227 3.85387C12.5227 4.09001 12.4126 4.31649 12.2165 4.48347C12.0205 4.65045 11.7546 4.74426 11.4774 4.74426C11.2002 4.74426 10.9343 4.65045 10.7383 4.48347L10.74 4.48125Z"
+                                                    fill="white" />
+                                            </svg>
+
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="items">Jan 01, 2023</td>
+                                    <td class="items">$10</td>
+                                    <td class="items">
+                                        <button type="button">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0 7.40778V14.5186C0 14.9115 0.183229 15.2883 0.509379 15.5661C0.83553 15.8439 1.27788 16 1.73913 16H14.2609C14.7221 16 15.1645 15.8439 15.4906 15.5661C15.8168 15.2883 16 14.9115 16 14.5186V7.40778C16 7.01489 15.8168 6.63808 15.4906 6.36026C15.1645 6.08245 14.7221 5.92637 14.2609 5.92637H12.1739C11.8972 5.92637 11.6318 6.02001 11.4361 6.18671C11.2404 6.3534 11.1304 6.57948 11.1304 6.81522C11.1304 7.05096 11.2404 7.27704 11.4361 7.44373C11.6318 7.61042 11.8972 7.70407 12.1739 7.70407H13.913V14.2223H2.08696V7.70407H3.82609C4.10283 7.70407 4.36825 7.61042 4.56394 7.44373C4.75963 7.27704 4.86957 7.05096 4.86957 6.81522C4.86957 6.57948 4.75963 6.3534 4.56394 6.18671C4.36825 6.02001 4.10283 5.92637 3.82609 5.92637H1.73913C1.27788 5.92637 0.83553 6.08245 0.509379 6.36026C0.183229 6.63808 0 7.01489 0 7.40778ZM10.74 4.48125L9.04348 3.0376V9.18548C9.04348 9.42122 8.93354 9.6473 8.73785 9.814C8.54216 9.98069 8.27675 10.0743 8 10.0743C7.72325 10.0743 7.45784 9.98069 7.26215 9.814C7.06646 9.6473 6.95652 9.42122 6.95652 9.18548V3.0376L5.26 4.48347C5.16294 4.56615 5.0477 4.63173 4.92088 4.67648C4.79406 4.72123 4.65814 4.74426 4.52087 4.74426C4.3836 4.74426 4.24767 4.72123 4.12085 4.67648C3.99403 4.63173 3.8788 4.56615 3.78174 4.48347C3.68468 4.40079 3.60768 4.30263 3.55515 4.1946C3.50262 4.08658 3.47558 3.97079 3.47558 3.85387C3.47558 3.73694 3.50262 3.62116 3.55515 3.51313C3.60768 3.4051 3.68468 3.30694 3.78174 3.22426L7.26 0.26143C7.35694 0.178566 7.47214 0.112817 7.59897 0.0679552C7.72581 0.0230931 7.86179 0 7.99913 0C8.13647 0 8.27245 0.0230931 8.39929 0.0679552C8.52613 0.112817 8.64132 0.178566 8.73826 0.26143L12.2165 3.22426C12.3136 3.30694 12.3906 3.4051 12.4431 3.51313C12.4956 3.62116 12.5227 3.73694 12.5227 3.85387C12.5227 4.09001 12.4126 4.31649 12.2165 4.48347C12.0205 4.65045 11.7546 4.74426 11.4774 4.74426C11.2002 4.74426 10.9343 4.65045 10.7383 4.48347L10.74 4.48125Z"
+                                                    fill="white" />
+                                            </svg>
+
+                                        </button>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div><!-- TRANSECTION HISTORY Card END-->
+                    </div><!-- PAYMENT CARD & INVOICE CONTAINER end -->
+
+                    <!-- PRICING CONTAINER-->
+                    <h2 class="heading">Packages</h2>
+
+                    <!-- Pricing container -->
+                    <div class="pricing_container">
+
+                        <!-- Pricing CARD Starter-->
+                        <div class="pricing_card active" id="starter">
+                            <h2>Starter</h2>
+                            <p>Digital business card with long-lasting impressions</p>
+                            <label for=""><strong>Free</strong> forever</label>
+
+                            <!-- Services list -->
+                            <ul>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Unique digital business card</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Customizable virtual backgrounds</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Multiple email signature styles</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Unlimited card sharing</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Unlimited links</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Share by QR code</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Customer support</span>
+                                </li>
+                            </ul><!-- Services list END-->
+                            <button type="button" class="btn active">
+                                Activated Plan
+                            </button>
+                        </div><!-- Pricing CARD Starter END-->
+
+                        <!-- Pricing CARD Professionals-->
+                        <div class="pricing_card" id="professionals">
+                            <h2>Professionals</h2>
+                            <p>Digital business card with long-lasting impressions</p>
+                            <label for=""><strong>€2.49 </strong> / month</label>
+
+                            <!-- Services list -->
+                            <ul>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Unique digital business card</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Customizable virtual backgrounds</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Multiple email signature styles</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Unlimited card sharing</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Unlimited links</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Share by QR code</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Customer support</span>
+                                </li>
+                            </ul><!-- Services list END-->
+                            <button type="button" class="btn">
+                                Switch Plan
+                            </button>
+                        </div><!-- Pricing CARD Professionals END-->
+
+                        <!-- Pricing CARD Team-->
+                        <div class="pricing_card" id="team">
+                            <h2>Team</h2>
+                            <p>Digital business card with long-lasting impressions</p>
+                            <label for=""><strong>€1.99</strong> / month</label>
+
+                            <!-- Services list -->
+                            <ul>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Unique digital business card</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Customizable virtual backgrounds</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Multiple email signature styles</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Unlimited card sharing</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Unlimited links</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Share by QR code</span>
+                                </li>
+                                <li>
+                                    <img src="assest/icons/checked.svg" alt="">
+                                    <span>Customer support</span>
+                                </li>
+                            </ul><!-- Services list END-->
+                            <button type="button" class="btn">
+                                Switch Plan
+                            </button>
+                        </div><!-- Pricing CARD Team END-->
+                    </div><!-- Pricing container end-->
+
+
+                </div><!-- left side main content end-->
+            </div><!-- CONTAIENR END-->
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <div class="wrapper dashboard" id="dashboard">
+
+        <!-- Top header -->
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="assest/icons/tapone-logo.svg" alt="">
+                </div>
+                <!-- MENU TOGOLLER BUTTON -->
+                <button class="menu-toggoler">
+                    <i class="ri-menu-2-line"></i>
+                    <img src="assest/images/user-profile.png" alt="">
+                </button>
+
+                <!-- SIDEBAR MENU FOR MOBILE & DESKTOP -->
+                <div class="side_menu-bar">
+                    <!--  -->
+                    <div class="desktop_menu">
+                        <ul>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-user-line"></i>
+                                    <span>My profile</span>
+                                </a>
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-question-answer-line"></i>
+                                    <span>Support</span>
+                                </a>
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-notification-badge-line"></i>
+                                    <span>Whats New</span>
+                                </a>
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-flashlight-line"></i>
+                                    <span>Feature Request</span>
+                                </a>
+
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-question-line"></i>
+                                    <span>Help Center</span>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                    <nav class="mobile_menu">
+                        <button class="menu-toggoler">
+                            <i class="ri-close-line"></i>
+                        </button>
+                        <ul>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-user-line"></i>
+                                    <span>My profile</span>
+                                </a>
+                            </li>
+                            <li> <a href="dashboard.html">
+                                    <i class="ri-dashboard-line"></i>
+                                    <span>Dashboard</span> </a>
+                            </li>
+                            <li class="active"> <a href="index.html">
+                                    <i class="ri-edit-box-line"></i>
+                                    <span>Edit</span> </a></li>
+                            <li> <a href="addstaff.html">
+                                    <i class="ri-user-add-line"></i> <span>Add
+                                        Staff</span>
+                                </a>
+                            </li>
+                            <li> <a href="staff.html">
+                                    <i class="ri-team-line"></i> <span>Team Members</span>
+                                </a>
+                            </li>
+                            <li> <a href="gallery.html">
+                                    <i class="ri-gallery-line"></i> <span>Gallery</span>
+                                </a>
+                            </li>
+                            <li> <a href="contacts.html">
+                                    <i class="ri-contacts-line"></i>
+                                    <span>Contacts</span>
+                                </a>
+                            </li>
+                            <li> <a href="integrations.html">
+                                    <i class="ri-flashlight-line"></i>
+                                    <span>Integration</span> </a>
+                            </li>
+                            <li> <a href="personalize.html">
+                                    <i class="ri-brush-line"></i>
+                                    <span>Personalize</span> </a></li>
+                            <li> <a href="billing.html">
+                                    <i class="ri-money-dollar-box-line"></i>
+                                    <span>Billing</span>
+                                </a>
+                            </li>
+                            <li> <a href="#">
+                                    <i class="ri-logout-box-line"></i> <span>Logout</span> </a></li>
+
+                            <p>Important Links</p>
+
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-question-answer-line"></i>
+                                    <span>Support</span>
+                                </a>
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-notification-badge-line"></i>
+                                    <span>Whats New</span>
+                                </a>
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-flashlight-line"></i>
+                                    <span>Feature Request</span>
+                                </a>
+
+                            </li>
+                            <li class="menu-links">
+                                <a href="#">
+                                    <i class="ri-question-line"></i>
+                                    <span>Help Center</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div><!-- SIDEBAR MENU FOR MOBILE & DESKTOP END-->
+
+            </div>
+
+        </header>
+        <!-- Top header end -->
+        <!-- main container -->
+        <div class="main-container">
+            <!-- LEFT MENU -->
+            <div class="left-menu">
+                <!-- Main menu -->
+                <nav>
+                    <ul>
+                        <li class="active"> <a href="dashboard.html">
+                                <i class="ri-dashboard-line"></i>
+                                <span>Dashboard</span> </a>
+                        </li>
+                        <li> <a href="index.html">
+                                <i class="ri-edit-box-line"></i>
+                                <span>Edit</span> </a></li>
+                        <li> <a href="addstaff.html">
+                                <i class="ri-user-add-line"></i> <span>Add
+                                    Staff</span>
+                            </a>
+                        </li>
+                        <li> <a href="staff.html">
+                                <i class="ri-team-line"></i> <span>Team Members</span>
+                            </a>
+                        </li>
+                        <li> <a href="gallery.html">
+                                <i class="ri-gallery-line"></i> <span>Gallery</span>
+                            </a>
+                        </li>
+                        <li> <a href="contacts.html">
+                                <i class="ri-contacts-line"></i>
+                                <span>Contacts</span>
+                            </a>
+                        </li>
+                        <li> <a href="integrations.html">
+                                <i class="ri-flashlight-line"></i>
+                                <span>Integration</span> </a>
+                        </li>
+                        <li> <a href="personalize.html">
+                                <i class="ri-brush-line"></i>
+                                <span>Personalize</span> </a></li>
+                        <li> <a href="billing.html">
+                                <i class="ri-money-dollar-box-line"></i>
+                                <span>Billing</span>
+                            </a>
+                        </li>
+                        <li> <a href="#">
+                                <i class="ri-logout-box-line"></i> <span>Logout</span> </a></li>
+
+                    </ul>
+                </nav>
+
+            </div><!-- LEFT MENU END-->
+            <!-- CONTAIENR -->
+            <div class="container">
+                <!-- left side main content -->
+                <div class="left-side">
+                    <h2 class="page_title">Dashboard</h2>
+                    <div class="row card_box">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card">
+                                <div class="icon_box">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                                <div class="text-box">
+                                    <label for="" class="">Total Users</label>
+                                    <span class="number">1,289</span>
+                                    <span class="activity">since last 2 months</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card">
+                                <div class="icon_box">
+                                    <i class="ri-flag-line"></i>
+                                </div>
+                                <div class="text-box">
+                                    <label for="" class="">Total Sessions</label>
+                                    <span class="number">1,289</span>
+                                    <span class="activity">since last 2 months</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card">
+                                <div class="icon_box">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+                                <div class="text-box">
+                                    <label for="" class="">Page Views</label>
+                                    <span class="number">15,250</span>
+                                    <span class="activity">since last 2 months</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3 class="section_heading">Session Overview</h3>
+                            <div>
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- left side main content end-->
+            </div><!-- CONTAIENR END-->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
